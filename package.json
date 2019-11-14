@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon /Users/muradzalov/Desktop/FS/week2/wikistack/app.js"
+    "start": "nodemon ./app.js"
   },
   "author": "mz",
   "license": "ISC",
