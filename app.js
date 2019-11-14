@@ -35,10 +35,20 @@ app.get('/', (req, res, next) => {
 const PORT = 3000;
 
 // Function that calls a method to make the server begin listening on a specific port
-app.listen(PORT, () => {
-  console.log(`App listening in port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`App listening in port ${PORT}`);
+// });
 
+
+const init = async () => {
+  await models.User.sync()
+  await models.Page.sync()
+
+  yourExpressAppVar.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}!`);
+  });
+}
+init();
 
 // Console.logging a string to the node environment to demonstrate that our database is connected and the route is working
 db.authenticate().
